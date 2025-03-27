@@ -1,0 +1,79 @@
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background: linear-gradient(to bottom, #000000, #0a0a0a, #111111);
+  color: #fff;
+  position: relative;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+.album {
+  margin-bottom: 4rem;
+}
+
+.album img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.image-container img {
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  width: 100%;
+}
+
+.play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: 0.3s;
+  text-decoration: none;
+}
+
+.image-container:hover .play-overlay {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.play-overlay i {
+  font-size: 3rem;
+}
+
+.navbar {
+  background-color: #111;
+}
+
+.navbar a {
+  color: #fff;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}

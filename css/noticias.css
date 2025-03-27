@@ -1,0 +1,26 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+.card {
+  background-color: #1a1a1a;
+  border: none;
+}
+.card-title {
+  color: #0dcaf0;
+}
+.container-title {
+  margin-top: 100px;
+}
+.navbar {
+  background-color: #111;
+}
+.navbar a {
+  color: #fff;
+}

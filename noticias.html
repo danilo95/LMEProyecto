@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Noticias de Linkin Park</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/noticias.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Linkin Park</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="#integrantes">Integrantes</a></li>
+            <li class="nav-item"><a class="nav-link" href="calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link" href="discografia.html">Discografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-10">
+      <h1 class="mb-4 text-center container-title">Últimas noticias de Linkin Park</h1>
+      <div class="d-flex justify-content-end align-items-center mb-3">
+        <button id="grid-view" class="btn btn-outline-light me-2" title="Vista en cuadrícula">
+          <i class="bi bi-grid-3x3-gap-fill"></i>
+        </button>
+        <button id="list-view" class="btn btn-outline-light" title="Vista en lista">
+          <i class="bi bi-list"></i>
+        </button>
+      </div>
+      <div class="row" id="news-container">
+        <!-- Noticia 1 -->
+        <div class="col-md-4 mb-4 news-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="card h-100 text-white">
+            <div class="card-body">
+              <h5 class="card-title">Linkin Park lanza "Friendly Fire", canción inédita con Chester Bennington</h5>
+              <p class="card-text">
+                La banda lanzó una poderosa canción inédita con la voz de Chester, grabada durante el álbum "One More Light".
+              </p>
+              <a
+                href="https://www.rollingstone.com/music/music-news/linkin-park-unreleased-song-friendly-fire-chester-bennington-1234954281/"
+                class="btn btn-primary"
+                target="_blank"
+                >Leer más</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 2 -->
+        <div class="col-md-4 mb-4 news-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="card h-100 text-white">
+            <div class="card-body">
+              <h5 class="card-title">Mike Shinoda habla sobre el futuro de Linkin Park</h5>
+              <p class="card-text">
+                Shinoda revela que no hay planes inmediatos para giras o nueva música, pero no descarta el futuro de la banda.
+              </p>
+              <a
+                href="https://www.nme.com/news/music/mike-shinoda-on-linkin-parks-future-no-tours-no-music-no-albums-3413689"
+                class="btn btn-primary"
+                target="_blank"
+                >Leer más</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 3 -->
+        <div class="col-md-4 mb-4 news-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="card h-100 text-white">
+            <div class="card-body">
+              <h5 class="card-title">Linkin Park celebra 20 años de "Meteora" con edición especial</h5>
+              <p class="card-text">
+                La banda lanzó una edición de lujo por el aniversario del icónico álbum, con demos y material inédito.
+              </p>
+              <a
+                href="https://www.billboard.com/music/rock/linkin-park-meteora-20th-anniversary-edition-1235258967/"
+                class="btn btn-primary"
+                target="_blank"
+                >Leer más</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 4 -->
+        <div class="col-md-4 mb-4 news-item" data-aos="fade-up" data-aos-delay="400">
+          <div class="card h-100 text-white">
+            <div class="card-body">
+              <h5 class="card-title">Fans reaccionan al nuevo video de "Lost", canción inédita de Linkin Park</h5>
+              <p class="card-text">La banda sorprendió con un videoclip estilo anime para su tema inédito "Lost".</p>
+              <a
+                href="https://www.kerrang.com/linkin-park-share-anime-video-for-lost-featuring-chester-bennington"
+                class="btn btn-primary"
+                target="_blank"
+                >Leer más</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 5 -->
+        <div class="col-md-4 mb-4 news-item" data-aos="fade-up" data-aos-delay="500">
+          <div class="card h-100 text-white">
+            <div class="card-body">
+              <h5 class="card-title">Chester Bennington es recordado con tributos a 6 años de su partida</h5>
+              <p class="card-text">Fans y músicos rinden homenaje al legado de Chester, una voz icónica del nu-metal.</p>
+              <a href="https://loudwire.com/chester-bennington-tribute-anniversary/" class="btn btn-primary" target="_blank"
+                >Leer más</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 6 -->
+        <div class="col-md-4 mb-4 news-item" data-aos="fade-up" data-aos-delay="600">
+          <div class="card h-100 text-white">
+            <div class="card-body">
+              <h5 class="card-title">Mike Shinoda lanza nueva música solista: "Already Over"</h5>
+              <p class="card-text">
+                El vocalista y productor de Linkin Park continúa su carrera en solitario con nuevos lanzamientos.
+              </p>
+              <a
+                href="https://rocksound.tv/news/read/mike-shinoda-unveils-brand-new-solo-track-already-over"
+                class="btn btn-primary"
+                target="_blank"
+                >Leer más</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <!-- Noticia 7 -->
+        <div class="col-md-4 mb-4 news-item" data-aos="fade-up" data-aos-delay="700">
+          <div class="card h-100 text-white">
+            <div class="card-body">
+              <h5 class="card-title">Linkin Park alcanza mil millones de reproducciones con "Numb"</h5>
+              <p class="card-text">
+                El video oficial de "Numb" supera los mil millones de vistas en YouTube, consolidando su legado.
+              </p>
+              <a
+                href="https://www.billboard.com/music/rock/linkin-park-numb-1-billion-views-youtube-9615421/"
+                class="btn btn-primary"
+                target="_blank"
+                >Leer más</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2025 Linkin Park Fan Page. Todos los derechos reservados.</p>
+    </footer>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true,
+    });
+  </script>
+  <script>
+    const gridBtn = document.getElementById("grid-view");
+    const listBtn = document.getElementById("list-view");
+    const newsItems = document.querySelectorAll(".news-item");
+
+    gridBtn.addEventListener("click", () => {
+      newsItems.forEach((item) => {
+        item.classList.remove("col-12");
+        item.classList.add("col-md-4");
+      });
+    });
+
+    listBtn.addEventListener("click", () => {
+      newsItems.forEach((item) => {
+        item.classList.remove("col-md-4");
+        item.classList.add("col-12");
+      });
+    });
+  </script>
+</html>

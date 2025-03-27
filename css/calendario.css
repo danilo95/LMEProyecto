@@ -1,0 +1,82 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+.view-toggle .btn {
+  border: 1px solid #fff;
+  color: #fff;
+  background: transparent;
+  margin-left: 5px;
+}
+.view-toggle .btn.active {
+  background-color: #fff;
+  color: #000;
+}
+.event-date {
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  min-width: 60px;
+}
+.event-date .month {
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.event-item {
+  border-bottom: 1px solid #444;
+  padding: 20px 0;
+}
+.event-price {
+  font-weight: bold;
+  color: #00ff99;
+}
+.grid-view .event-card {
+  background-color: #111;
+  border-radius: 10px;
+  padding: 20px;
+  color: #fff;
+  border: 1px solid #333;
+}
+.d-none {
+  display: none !important;
+}
+.navbar {
+  background-color: #111;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+.marginTop {
+  margin-top: 50px;
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+
+  #seccion-eventos,
+  #seccion-eventos * {
+    visibility: visible;
+  }
+
+  #seccion-eventos {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  #controles {
+    display: none !important;
+  }
+}
