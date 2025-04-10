@@ -7,70 +7,87 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <!-- CSS -->
-    <link rel="stylesheet" href="css/noticias.css" />
+    <link rel="stylesheet" href="css/contacto.css" />
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
   </head>
- <body>
+  <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-          <a class="navbar-brand" href="index.html">Linkin Park</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
-              <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
-              <li class="nav-item"><a class="nav-link" href="#integrantes">Integrantes</a></li>
-              <li class="nav-item"><a class="nav-link" href="calendario.html">Calendario</a></li>
-              <li class="nav-item"><a class="nav-link" href="discografia.html">Discografía</a></li>
-              <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-            </ul>
-          </div>
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Linkin Park</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="#historia">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="integrantes.html">Integrantes</a></li>
+            <li class="nav-item"><a class="nav-link" href="calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link" href="discografia.html">Discografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
         </div>
-      </nav>
-     
-       <body>
+      </div>
+    </nav>
 
-          <!-- Contenedor principal -->
-          <div class="container mt-5">
-              <div class="row">
-                  <div class="col-12">
-                    
-                      <h2 class="text-center">Contacto</h2>
-                      <p class="text-center">Si tienes alguna pregunta, no dudes en contactarnos. ¡Estaremos encantados de ayudarte!</p>
-                  </div>
-              </div>
-          
-              <!-- Formulario de contacto -->
-              <div class="row">
-                  <div class="col-md-8 offset-md-2">
-                      <form>
-                          <!-- Nombre -->
-                          <div class="mb-3">
-                              <label for="name" class="form-label">Nombre</label>
-                              <input type="text" class="form-control" id="name" placeholder="Tu nombre">
-                          </div>
-          
-                          <!-- Correo Electrónico -->
-                          <div class="mb-3">
-                              <label for="email" class="form-label">Correo Electrónico</label>
-                              <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico">
-                          </div>
-          
-                          <!-- Mensaje -->
-                          <div class="mb-3">
-                              <label for="message" class="form-label">Mensaje</label>
-                              <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí..."></textarea>
-                          </div>
-          
-                          <!-- Botón de enviar -->
-                          <button type="submit" class="btn btn-primary">Enviar</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-           
-          </body>
-          </html>
+    <!-- Contenedor principal -->
+    <div class="container mt-5 pt-5">
+      <div class="row">
+        <div class="col-12">
+          <h2 class="text-center">Contacto</h2>
+          <p class="text-center">Si tienes alguna pregunta, no dudes en contactarnos. ¡Estaremos encantados de ayudarte!</p>
+        </div>
+      </div>
+
+      <!-- Formulario de contacto -->
+      <div class="row">
+        <div class="col-md-8 offset-md-2">
+          <form id="contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="name" placeholder="Tu nombre" required />
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="message" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay de éxito -->
+    <div id="success-overlay">
+      <svg viewBox="0 0 52 52">
+        <path d="M14 27 l10 10 l20 -20" />
+      </svg>
+      ¡Enviado!
+    </div>
+    <footer class="footer">
+      <p>&copy; 2025 Linkin Park Fan Page. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      const form = document.getElementById("contact-form");
+      const overlay = document.getElementById("success-overlay");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        if (form.checkValidity()) {
+          overlay.style.display = "flex";
+          setTimeout(() => {
+            overlay.style.display = "none";
+            form.reset();
+          }, 2500);
+        }
+      });
+    </script>
+  </body>
+</html>
