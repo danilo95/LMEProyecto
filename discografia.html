@@ -2,6 +2,7 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="img/favicon.png" type="image/png">
     <title>Discografía de Linkin Park</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <!-- Bootstrap CSS -->
@@ -15,7 +16,10 @@
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="index.html">Linkin Park</a>
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/favicon.png" alt="Linkin Park Logo" style="height: 30px; margin-right: 10px;">
+          <span>Linkin Park</span>
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -50,6 +54,30 @@
             Álbum debut que catapultó a Linkin Park a la fama, con éxitos como "In the End", "Crawling" y "One Step Closer". Una
             mezcla poderosa de rock, rap y electrónica.
           </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalHybridTheory">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+     
+    <!--Modal albúm 1-->
+      <div class="modal fade" id="modalHybridTheory" tabindex="-1" aria-labelledby="modalHybridTheoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalHybridTheoryLabel">IN THE END music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/in_the_end.mp4" type="video/mp4"/>
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -57,7 +85,7 @@
       <div class="row align-items-center flex-md-row-reverse album" data-aos="fade-left">
         <div class="col-md-6 mb-4 mb-md-0">
           <div class="image-container">
-            <img src="img/album02.jpg" alt="Meteora" />
+            <img src="img/album02.jpg" alt="Meteora" class="img-meteora" />
             <a class="play-overlay" href="https://open.spotify.com/album/4Gfnly5CzMJQqkUFfoHaP3" target="_blank">
               <i class="bi bi-play-circle-fill"></i>
             </a>
@@ -69,6 +97,30 @@
             Segundo álbum de estudio, consolidando el sonido nu-metal con temas como "Numb", "Somewhere I Belong" y "Faint". Uno
             de los discos más icónicos de la banda.
           </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalMeteora">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 2-->
+      <div class="modal fade" id="modalMeteora" tabindex="-1" aria-labelledby="modalMeteoraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalMeteoraLabel">NUMB music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/numb.mp4" type="video/mp4"/>
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -88,8 +140,33 @@
             Una evolución hacia un sonido más melódico y alternativo. Incluye "What I've Done", "Bleed It Out" y "Shadow of the
             Day".
           </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalMinutestomidnight">
+            Ver video Musical
+          </button>
         </div>
       </div>
+
+      <!--Modal albúm 3-->
+      <div class="modal fade" id="modalMinutestomidnight" tabindex="-1" aria-labelledby="modalMinutestomidnightLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalMinutestomidnightLabel">BLEED IT OUT music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/Bleed_it_out.mp4" type="video/mp4"/>
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <!-- Álbum 4 -->
       <div class="row align-items-center flex-md-row-reverse album" data-aos="fade-left">
         <div class="col-md-6 mb-4 mb-md-0">
@@ -106,6 +183,30 @@
             Un álbum conceptual con una fuerte carga política y experimental. Destacan "The Catalyst", "Waiting for the End" y
             "Burning in the Skies".
           </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalAthousandsuns">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 4-->
+      <div class="modal fade" id="modalAthousandsuns" tabindex="-1" aria-labelledby="modalAthousandsunsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalAthousandsunsLabel">THE CATALYST music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/The_catalyst.mp4" type="video/mp4"/>
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -125,6 +226,30 @@
             Una fusión entre lo electrónico y lo orgánico, con canciones como "Burn It Down", "Lost in the Echo" y "Castle of
             Glass".
           </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalLivingthings">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 5-->
+      <div class="modal fade" id="modalLivingthings" tabindex="-1" aria-labelledby="modalLivingthingsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalLivingthingsLabel">WAITING FOR THE END music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/Waiting_for_the_end.mp4" type="video/mp4"/>
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -144,6 +269,30 @@
             Un regreso a sonidos más agresivos y crudos. Temas destacados: "Guilty All the Same", "Until It’s Gone" y "Final
             Masquerade".
           </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalThehuntingparty">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 6-->
+      <div class="modal fade" id="modalThehuntingparty" tabindex="-1" aria-labelledby="modalThehuntingpartyLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalThehuntingpartyLabel">THE HUNTING PARTY (live performance)  music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-boday">
+              <video controls width="100%">
+                <source src="video/The_hunting_party.mp4" type="video/mp4"/>
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -163,9 +312,34 @@
             El último álbum con Chester Bennington, con un enfoque más pop. Incluye "Heavy", "Talking to Myself" y "One More
             Light".
           </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalOnemorelight">
+            Ver video Musical
+          </button>
         </div>
       </div>
     </div>
+
+    <!--Modal albúm 7-->
+    <div class="modal fade" id="modalOnemorelight" tabindex="-1" aria-labelledby="modalOnemorelightLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content modal-content bg-dark text-gray">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalOnemorelightLabel">ONE MORE LIGHT music video</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <video controls width="100%">
+              <source src="video/One_more_night.mp4" type="video/mp4"/>
+              Tu navegador no soporta el video.
+            </video>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer class="footer">
       <p>&copy; 2025 Linkin Park Fan Page. Todos los derechos reservados.</p>
     </footer>

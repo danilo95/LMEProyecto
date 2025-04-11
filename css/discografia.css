@@ -28,9 +28,13 @@ body {
 }
 
 .image-container img {
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
   width: 100%;
+  max-width: 350px;    
+  height: auto;        
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto;
+  display: block;
 }
 
 .play-overlay {
@@ -52,6 +56,14 @@ body {
 .image-container:hover .play-overlay {
   opacity: 1;
   cursor: pointer;
+}
+
+.img-meteora {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 8px;
+  max-height: 350px; 
 }
 
 .play-overlay i {
@@ -76,4 +88,17 @@ img {
   text-align: center;
   padding: 20px;
   color: #aaa;
+}
+
+
+.btn-semi {
+  background-color: rgba(219, 55, 30, 0.42);
+  color: white;
+  border: 1px solid rgba(142, 43, 16, 0.8);
+  transition: 0.3s ease;
+}
+
+.btn-semi:hover{
+  background-color: rgba(230, 14, 14, 0.614);
+
 }
