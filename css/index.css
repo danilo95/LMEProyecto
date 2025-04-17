@@ -1,0 +1,31 @@
+body {
+  background-color: #000;
+  color: #fff;
+}
+section {
+  padding: 60px 0;
+}
+.img-fixed-height {
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+.img-fixed-height:hover {
+  transform: scale(1.1);
+}
+.text-justificado {
+  text-align: justify;
+}
+.navbar {
+  background-color: #111;
+}
+.navbar a {
+  color: #fff;
+}
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}

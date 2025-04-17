@@ -1,0 +1,61 @@
+body {
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+}
+
+.song-card {
+  background-color: #111;
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-play {
+  width: 50px;
+  height: 50px;
+  background-color: #333;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.progress {
+  height: 8px;
+}
+
+.progress-bar {
+  background-color: #0d6efd;
+}
+.navbar {
+  background-color: #111;
+}
+.navbar a {
+  color: #fff;
+}
+.footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
+  color: #aaa;
+}
+
+@keyframes pulseDark {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+body.playing {
+  animation: pulseDark 12s ease infinite;
+  background: linear-gradient(-45deg, #0f0f1f, #1c1b2f, #121212, #1a1a1a);
+  background-size: 400% 400%;
+  transition: background 1s ease-in-out;
+}

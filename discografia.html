@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="img/favicon.png" type="image/png" />
+    <title>Discografía de Linkin Park</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/discografia.css" />
+    <!-- Iconos de Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/favicon.png" alt="Linkin Park Logo" style="height: 30px; margin-right: 10px" />
+          <span>Linkin Park</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="integrantes.html">Integrantes</a></li>
+            <li class="nav-item"><a class="nav-link" href="calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link" href="discografia.html">Discografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-5">
+      <h1 class="text-center mb-5 mt-5">Discografía de Linkin Park</h1>
+
+      <!-- Álbum 1 -->
+      <div class="row align-items-center album" data-aos="fade-right">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-container">
+            <img src="img/album01.jpg" alt="Hybrid Theory" />
+            <a class="play-overlay" href="https://open.spotify.com/album/6hPkbAV3ZXpGZBGUvL6jVM" target="_blank">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start mt-3 mt-md-0">
+          <h3>Hybrid Theory (2000)</h3>
+          <p>
+            Álbum debut que catapultó a Linkin Park a la fama, con éxitos como "In the End", "Crawling" y "One Step Closer". Una
+            mezcla poderosa de rock, rap y electrónica.
+          </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalHybridTheory">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 1-->
+      <div class="modal fade" id="modalHybridTheory" tabindex="-1" aria-labelledby="modalHybridTheoryLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalHybridTheoryLabel">IN THE END music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/in_the_end.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Álbum 2 -->
+      <div class="row align-items-center flex-md-row-reverse album" data-aos="fade-left">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-container">
+            <img src="img/album02.jpg" alt="Meteora" class="img-meteora" />
+            <a class="play-overlay" href="https://open.spotify.com/album/4Gfnly5CzMJQqkUFfoHaP3" target="_blank">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start mt-3 mt-md-0">
+          <h3>Meteora (2003)</h3>
+          <p>
+            Segundo álbum de estudio, consolidando el sonido nu-metal con temas como "Numb", "Somewhere I Belong" y "Faint". Uno
+            de los discos más icónicos de la banda.
+          </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalMeteora">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 2-->
+      <div class="modal fade" id="modalMeteora" tabindex="-1" aria-labelledby="modalMeteoraLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalMeteoraLabel">NUMB music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/numb.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Álbum 3 -->
+      <div class="row align-items-center album" data-aos="fade-right">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-container">
+            <img src="img/album03.jpg" alt="Minutes to Midnight" />
+            <a class="play-overlay" href="https://open.spotify.com/album/2tlTBLz2w52rpGCLBGyGw6" target="_blank">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start mt-3 mt-md-0">
+          <h3>Minutes to Midnight (2007)</h3>
+          <p>
+            Una evolución hacia un sonido más melódico y alternativo. Incluye "What I've Done", "Bleed It Out" y "Shadow of the
+            Day".
+          </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalMinutestomidnight">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 3-->
+      <div
+        class="modal fade"
+        id="modalMinutestomidnight"
+        tabindex="-1"
+        aria-labelledby="modalMinutestomidnightLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalMinutestomidnightLabel">BLEED IT OUT music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/Bleed_it_out.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Álbum 4 -->
+      <div class="row align-items-center flex-md-row-reverse album" data-aos="fade-left">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-container">
+            <img src="img/album04.jpg" alt="A Thousand Suns" />
+            <a class="play-overlay" href="https://open.spotify.com/intl-es/album/5uvXx5ZQswNRFCdHR521YZ" target="_blank">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start mt-3 mt-md-0">
+          <h3>A Thousand Suns (2010)</h3>
+          <p>
+            Un álbum conceptual con una fuerte carga política y experimental. Destacan "The Catalyst", "Waiting for the End" y
+            "Burning in the Skies".
+          </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalAthousandsuns">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 4-->
+      <div
+        class="modal fade"
+        id="modalAthousandsuns"
+        tabindex="-1"
+        aria-labelledby="modalAthousandsunsLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalAthousandsunsLabel">THE CATALYST music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/The_catalyst.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-semi" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Álbum 5 -->
+      <div class="row align-items-center album" data-aos="fade-right">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-container">
+            <img src="img/album05.jpg" alt="Living Things" />
+            <a class="play-overlay" href="https://open.spotify.com/intl-es/album/4XHIjbhjRmqWlosjj5rqSI" target="_blank">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start mt-3 mt-md-0">
+          <h3>Living Things (2012)</h3>
+          <p>
+            Una fusión entre lo electrónico y lo orgánico, con canciones como "Burn It Down", "Lost in the Echo" y "Castle of
+            Glass".
+          </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalLivingthings">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 5-->
+      <div class="modal fade" id="modalLivingthings" tabindex="-1" aria-labelledby="modalLivingthingsLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalLivingthingsLabel">WAITING FOR THE END music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <video controls width="100%">
+                <source src="video/Waiting_for_the_end.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Álbum 6 -->
+      <div class="row align-items-center flex-md-row-reverse album" data-aos="fade-left">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-container">
+            <img src="img/album06.jpg" alt="The Hunting Party" />
+            <a class="play-overlay" href="https://open.spotify.com/intl-es/album/3XB2yloP7l00tEUmaODtVi" target="_blank">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start mt-3 mt-md-0">
+          <h3>The Hunting Party (2014)</h3>
+          <p>
+            Un regreso a sonidos más agresivos y crudos. Temas destacados: "Guilty All the Same", "Until It’s Gone" y "Final
+            Masquerade".
+          </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalThehuntingparty">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+
+      <!--Modal albúm 6-->
+      <div
+        class="modal fade"
+        id="modalThehuntingparty"
+        tabindex="-1"
+        aria-labelledby="modalThehuntingpartyLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content modal-content bg-dark text-gray">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="modalThehuntingpartyLabel">KEYS TO THE KINGDOM music video</h1>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-boday">
+              <video controls width="100%">
+                <source src="video/The_hunting_party.mp4" type="video/mp4" />
+                Tu navegador no soporta el video.
+              </video>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Álbum 7 -->
+      <div class="row align-items-center album" data-aos="fade-right">
+        <div class="col-md-6 mb-4 mb-md-0">
+          <div class="image-container">
+            <img src="img/album07.jpg" alt="One More Light" />
+            <a class="play-overlay" href="https://open.spotify.com/intl-es/album/5Eevxp2BCbWq25ZdiXRwYd" target="_blank">
+              <i class="bi bi-play-circle-fill"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 mb-4 mb-md-0 text-center text-md-start mt-3 mt-md-0">
+          <h3>One More Light (2017)</h3>
+          <p>
+            El último álbum con Chester Bennington, con un enfoque más pop. Incluye "Heavy", "Talking to Myself" y "One More
+            Light".
+          </p>
+          <button type="button" class="btn btn-semi" data-bs-toggle="modal" data-bs-target="#modalOnemorelight">
+            Ver video Musical
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!--Modal albúm 7-->
+    <div class="modal fade" id="modalOnemorelight" tabindex="-1" aria-labelledby="modalOnemorelightLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content modal-content bg-dark text-gray">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="modalOnemorelightLabel">ONE MORE LIGHT music video</h1>
+            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <video controls width="100%">
+              <source src="video/One_more_night.mp4" type="video/mp4" />
+              Tu navegador no soporta el video.
+            </video>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2025 Linkin Park Fan Page. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+      document.querySelectorAll(".modal").forEach((modal) => {
+        modal.addEventListener("hidden.bs.modal", () => {
+          const video = modal.querySelector("video");
+          if (video) {
+            video.pause();
+            video.currentTime = 0;
+          }
+        });
+      });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

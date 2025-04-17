@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/favicon.png" type="image/png">
+    <title>Calendario | Linkin Park Fan Site</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/calendario.css" />
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/favicon.png" alt="Linkin Park Logo" style="height: 30px; margin-right: 10px;">
+          <span>Linkin Park</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="integrantes.html">Integrantes</a></li>
+            <li class="nav-item"><a class="nav-link" href="calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link" href="discografia.html">Discografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-5 marginTop" id="seccion-eventos">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <h2 class="mb-0">Eventos</h2>
+        <div class="view-toggle btn-group" role="group" id="controles">
+          <button class="btn active" id="btn-lista" onclick="cambiarVista('lista')"><i class="bi bi-list"></i></button>
+          <button class="btn" id="btn-cuadricula" onclick="cambiarVista('cuadricula')">
+            <i class="bi bi-grid-3x3-gap-fill"></i>
+          </button>
+          <button class="btn btn-outline-light" onclick="imprimirEventos()" title="Imprimir eventos">
+            <i class="bi bi-printer"></i>
+          </button>
+        </div>
+      </div>
+
+      <!-- Vista lista -->
+      <div id="vista-lista">
+        <!-- Evento 1 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">abr</div>
+              <div class="day fs-4">26</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Austin, TX</h5>
+              <div>sáb, 7:30 p. m. · Moody Center</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $122</div>
+        </div>
+
+        <!-- Evento 2 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">abr</div>
+              <div class="day fs-4">28</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Tulsa, OK</h5>
+              <div>lun, 6:00 p. m. · BOK Center</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $75</div>
+        </div>
+
+        <!-- Evento 3 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">1</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Grand Rapids, MI</h5>
+              <div>jue, 6:00 p. m. · Van Andel Arena</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $72</div>
+        </div>
+
+        <!-- Evento 4 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">3</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Baltimore, MD</h5>
+              <div>sáb, 7:30 p. m. · Royal Farms Arena</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $170</div>
+        </div>
+
+        <!-- Evento 5 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">6</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Raleigh, NC</h5>
+              <div>mar, 7:30 p. m. · PNC Arena</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $75</div>
+        </div>
+
+        <!-- Evento 6 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">8</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Greenville, SC</h5>
+              <div>jue, 6:00 p. m. · Bon Secours Wellness Arena</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $103</div>
+        </div>
+
+        <!-- Evento 7 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">10</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Orlando, FL</h5>
+              <div>vie, 8:00 p. m. · Amway Center</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $110</div>
+        </div>
+
+        <!-- Evento 8 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">12</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Atlanta, GA</h5>
+              <div>dom, 7:00 p. m. · State Farm Arena</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $98</div>
+        </div>
+
+        <!-- Evento 9 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">14</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Nashville, TN</h5>
+              <div>mar, 8:00 p. m. · Bridgestone Arena</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $115</div>
+        </div>
+
+        <!-- Evento 10 -->
+        <div class="event-item d-flex justify-content-between align-items-start flex-wrap">
+          <div class="d-flex gap-3">
+            <div class="event-date text-center">
+              <div class="month">may</div>
+              <div class="day fs-4">17</div>
+            </div>
+            <div>
+              <h5 class="mb-1">Chicago, IL</h5>
+              <div>vie, 8:30 p. m. · United Center</div>
+              <div class="mt-2"><a href="#" class="d-block text-info">Ticketmaster</a></div>
+            </div>
+          </div>
+          <div class="event-price mt-3 mt-md-0">desde $125</div>
+        </div>
+      </div>
+
+      <!-- Vista cuadrícula -->
+      <div id="vista-cuadricula" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 d-none grid-view">
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">abr</div>
+              <div class="day fs-4">26</div>
+            </div>
+            <h5>Austin, TX</h5>
+            <div>sáb, 7:30 p. m. · Moody Center</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $122</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">abr</div>
+              <div class="day fs-4">28</div>
+            </div>
+            <h5>Tulsa, OK</h5>
+            <div>lun, 6:00 p. m. · BOK Center</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $75</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">1</div>
+            </div>
+            <h5>Grand Rapids, MI</h5>
+            <div>jue, 6:00 p. m. · Van Andel Arena</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $72</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">3</div>
+            </div>
+            <h5>Baltimore, MD</h5>
+            <div>sáb, 7:30 p. m. · Royal Farms Arena</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $170</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">6</div>
+            </div>
+            <h5>Raleigh, NC</h5>
+            <div>mar, 7:30 p. m. · PNC Arena</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $75</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">8</div>
+            </div>
+            <h5>Greenville, SC</h5>
+            <div>jue, 6:00 p. m. · Bon Secours Wellness Arena</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $103</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">10</div>
+            </div>
+            <h5>Orlando, FL</h5>
+            <div>vie, 8:00 p. m. · Amway Center</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $110</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">12</div>
+            </div>
+            <h5>Atlanta, GA</h5>
+            <div>dom, 7:00 p. m. · State Farm Arena</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $98</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">14</div>
+            </div>
+            <h5>Nashville, TN</h5>
+            <div>mar, 8:00 p. m. · Bridgestone Arena</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $115</div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="event-card h-100">
+            <div class="event-date mb-2">
+              <div class="month">may</div>
+              <div class="day fs-4">17</div>
+            </div>
+            <h5>Chicago, IL</h5>
+            <div>vie, 8:30 p. m. · United Center</div>
+            <a href="#" class="d-block text-info mt-2">Ticketmaster</a>
+            <div class="event-price mt-3">desde $125</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <p>&copy; 2025 Linkin Park Fan Page. Todos los derechos reservados.</p>
+    </footer>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+      function imprimirEventos() {
+        window.print();
+      }
+    </script>
+    <script>
+      function cambiarVista(vista) {
+        const lista = document.getElementById("vista-lista");
+        const cuadricula = document.getElementById("vista-cuadricula");
+        const btnLista = document.getElementById("btn-lista");
+        const btnCuadricula = document.getElementById("btn-cuadricula");
+
+        if (vista === "lista") {
+          lista.classList.remove("d-none");
+          cuadricula.classList.add("d-none");
+          btnLista.classList.add("active");
+          btnCuadricula.classList.remove("active");
+        } else {
+          lista.classList.add("d-none");
+          cuadricula.classList.remove("d-none");
+          btnLista.classList.remove("active");
+          btnCuadricula.classList.add("active");
+        }
+      }
+    </script>
+  </body>
+</html>
