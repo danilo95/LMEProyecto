@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lista de reproducción</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/reproductor.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center" href="index.html">
+          <img src="img/favicon.png" alt="Linkin Park Logo" style="height: 30px; margin-right: 10px" />
+          <span>Linkin Park</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="historia.html">Historia</a></li>
+            <li class="nav-item"><a class="nav-link" href="noticias.html">Noticias</a></li>
+            <li class="nav-item"><a class="nav-link" href="integrantes.html">Integrantes</a></li>
+            <li class="nav-item"><a class="nav-link" href="calendario.html">Calendario</a></li>
+            <li class="nav-item"><a class="nav-link" href="discografia.html">Discografía</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="container pt-5">
+      <h2 class="mb-4">Lista de reproduccion</h2>
+    </div>
+
+    <div id="playlist-container"></div>
+
+    <script>
+      const videoNames = [
+        "in_the_end.mp4",
+        "numb.mp4",
+        "Bleed_it_out.mp4",
+        "One_more_night.mp4",
+        "Waiting_for_the_end.mp4",
+        "The_catalyst.mp4",
+      ];
+
+      const container = document.getElementById("playlist-container");
+
+      videoNames.forEach((fileName, index) => {
+        const songTitle = fileName.replace(/_/g, " ").replace(".mp4", "");
+
+        const songCard = document.createElement("div");
+        songCard.className = "song-card d-flex align-items-center gap-3";
+
+        songCard.innerHTML = `
+        <button class="btn-play" data-index="${index}">
+          <i class="bi bi-play-fill"></i>
+        </button>
+        <div class="flex-grow-1">
+          <div class="fw-bold text-white text-capitalize">${songTitle}</div>
+          <div class="progress mt-2">
+            <div class="progress-bar" role="progressbar" style="width: 0%;" id="progress-${index}"></div>
+          </div>
+        </div>
+        <video id="video-${index}" src="video/${fileName}" style="display:none"></video>
+      `;
+
+        container.appendChild(songCard);
+      });
+
+      document.addEventListener("click", function (e) {
+        if (e.target.closest(".btn-play")) {
+          const btn = e.target.closest(".btn-play");
+          const index = btn.dataset.index;
+          const video = document.getElementById(`video-${index}`);
+          const progressBar = document.getElementById(`progress-${index}`);
+          const icon = btn.querySelector("i");
+
+          if (video.paused) {
+            document.querySelectorAll("video").forEach((v, i) => {
+              if (i != index) {
+                v.pause();
+                const otherBtn = document.querySelector(`.btn-play[data-index="${i}"] i`);
+                if (otherBtn) otherBtn.className = "bi bi-play-fill";
+              }
+            });
+
+            video.play();
+            icon.className = "bi bi-pause-fill";
+            document.body.classList.add("playing");
+          } else {
+            video.pause();
+            icon.className = "bi bi-play-fill";
+            document.body.classList.remove("playing");
+          }
+
+          video.ontimeupdate = () => {
+            const progress = (video.currentTime / video.duration) * 100;
+            progressBar.style.width = progress + "%";
+          };
+        }
+      });
+    </script>
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
