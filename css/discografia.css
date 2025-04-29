@@ -29,8 +29,8 @@ body {
 
 .image-container img {
   width: 100%;
-  max-width: 350px;    
-  height: auto;        
+  max-width: 350px;
+  height: auto;
   object-fit: cover;
   border-radius: 8px;
   margin: 0 auto;
@@ -63,7 +63,7 @@ body {
   height: auto;
   object-fit: contain;
   border-radius: 8px;
-  max-height: 350px; 
+  max-height: 350px;
 }
 
 .play-overlay i {
@@ -90,7 +90,6 @@ img {
   color: #aaa;
 }
 
-
 .btn-semi {
   background-color: rgba(219, 55, 30, 0.42);
   color: white;
@@ -98,7 +97,6 @@ img {
   transition: 0.3s ease;
 }
 
-.btn-semi:hover{
+.btn-semi:hover {
   background-color: rgba(230, 14, 14, 0.614);
-
 }
