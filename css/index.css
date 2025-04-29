@@ -17,6 +17,150 @@ section {
 .text-justificado {
   text-align: justify;
 }
+
+.listen-card {
+  position: relative;
+  display: block;
+  padding: 60px 30px;
+  text-align: center;
+  background: #000;
+  color: white;
+  border-radius: 10px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: background-color 0.3s ease;
+}
+
+.listen-card h2 {
+  margin-bottom: 15px;
+}
+
+.listen-card span {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 20px;
+  border-radius: 5px;
+  display: inline-block;
+  font-weight: bold;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.listen-card .overlay-icon {
+  position: absolute;
+  font-size: 120px;
+  opacity: 0.1;
+  right: 20px;
+  bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.listen-card:hover .overlay-icon {
+  transform: scale(2.1);
+  opacity: 0.3;
+}
+
+.listen-card.spotify:hover .overlay-icon {
+  color: #198754;
+}
+
+.listen-card.music:hover .overlay-icon {
+  color: #0dcaf0;
+}
+
+.spotify-button:hover {
+  background-color: #198754;
+  opacity: 1;
+}
+
+.player-button:hover {
+  background-color: #0dcaf0;
+  opacity: 1;
+}
+
+.glitch-text {
+  position: relative;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+  animation: glitch-animation 2s infinite;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  color: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+  animation: glitch-before 2s infinite linear;
+  color: red;
+  z-index: -1;
+}
+
+.glitch-text::after {
+  animation: glitch-after 2s infinite linear;
+  color: green;
+  z-index: -1;
+}
+
+@keyframes glitch-before {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  10% {
+    clip: rect(0, 900px, 50px, 0);
+    left: -2px;
+  }
+  20% {
+    clip: rect(0, 900px, 30px, 0);
+    left: 2px;
+  }
+  30% {
+    clip: rect(0, 900px, 80px, 0);
+    left: -1px;
+  }
+  40% {
+    clip: rect(0, 900px, 40px, 0);
+    left: 1px;
+  }
+  100% {
+    clip: rect(0, 900px, 0, 0);
+    left: 0;
+  }
+}
+
+@keyframes glitch-after {
+  0% {
+    clip: rect(0, 900px, 0, 0);
+  }
+  10% {
+    clip: rect(0, 900px, 60px, 0);
+    left: 2px;
+  }
+  20% {
+    clip: rect(0, 900px, 20px, 0);
+    left: -2px;
+  }
+  30% {
+    clip: rect(0, 900px, 70px, 0);
+    left: 1px;
+  }
+  40% {
+    clip: rect(0, 900px, 30px, 0);
+    left: -1px;
+  }
+  100% {
+    clip: rect(0, 900px, 0, 0);
+    left: 0;
+  }
+}
+
 .navbar {
   background-color: #111;
 }
@@ -28,4 +172,18 @@ section {
   text-align: center;
   padding: 20px;
   color: #aaa;
+}
+
+@media (max-width: 768px) {
+  .spotify-button {
+    background-color: #198754 !important;
+    color: #fff !important;
+    opacity: 1 !important;
+  }
+
+  .player-button {
+    background-color: #0dcaf0 !important;
+    color: #fff !important;
+    opacity: 1 !important;
+  }
 }
